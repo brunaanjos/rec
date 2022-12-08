@@ -8,12 +8,37 @@
     - A quantidade de meninos e a quantidade de meninas que participaram da avaliação da qualidade da aula
     */
 
-    //ENTRADA
 
 
-    //PROCESSAMENTO
+    let maior8 = 0;
+    let menor5 = 0;
+    let quantidadeMeninas = 0;
+    let quantidadeMeninos = 0;
+
+    for (contador = 1; contador <= 10; contador++) {
+
+        let genero = prompt("Você é M ou F ?").toUpperCase();
+
+        let nota = parseInt(prompt(`Qual nota você avalia as aulas de programação I ?`))
+
+        if (nota < 5) {
+            menor5 = menor5 + 1
+        }
+        if (nota > 8) {
+            maior8 = maior8 + 1
+        } 
+        if (genero === "F"){
+            quantidadeMeninas = quantidadeMeninas + 1
+        }
+        else if (genero === "M") {
+            quantidadeMeninos = quantidadeMeninos + 1 
+        }
 
 
-    //SAÍDA
+    }
+    document.write( `A quantidade de pessoas que deram nota acima de ${maior8}`)
+    document.write(`A quantidade de pessoas que deram nota abaixo de ${menor5} `)
+    document.write(`A quantidade de meninos e meninas que participaram deste quetionario 
+     ${quantidadeMeninas} ${quantidadeMeninos}`)
 
 </script>
